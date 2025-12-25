@@ -1,8 +1,11 @@
-export interface VideoGenerationState {
-  status: 'idle' | 'uploading' | 'generating' | 'completed' | 'error';
-  progressMessage?: string;
-  videoUrl?: string;
-  error?: string;
+export interface RoadmapItemData {
+  id: string;
+  date: string;
+  title: string;
+  description: string;
+  points: string[];
 }
 
-export type AspectRatio = '16:9' | '9:16';
+export interface GeminiAnalysisResponse {
+  items: RoadmapItemData[];
+}
